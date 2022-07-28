@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Ontbijtkoek Clicker (zet jouw titel hier!)</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="style.css" media="screen"/>
+	</head>
+	<body>
+
+		<header>
+			<h2>Ontbijtkoek Clicker (zet jouw titel hier!)</h2>
+		</header>
+
+		<section>
+			<div id="klikRuimte">
+				<!-- alert() moet vervangen worden met een eigen functie. --> 
+				<img src="https://www.pngall.com/wp-content/uploads/2016/07/Cookie-PNG.png" onClick="onClickCookie()">
+				<br>
+				<!-- In deze h2 tags laten we de huidige hoeveelheid geld zien, 
+					en hoeveel geld we per seconde verdienen. --> 
+					<h2 id="geld">Geld: 0$</h2>
+					<h2 id="geldPerSeconde">Geld per seconde: 0$</h2>
+			</div>
+
+			<!-- In deze div laten we van elk type clicker zien hoeveel we er hebben. --> 
+			<div class="tierdisplay rows" id="actieveClickers">
+				<h3>Actieve Clickers</h3>
+
+				<div class="tier0">
+					<!-- Per clicker van dit type voegen we een afbeelding toe. Er zijn nu 2 Chefs. --> 
+				</div>
+
+				<div class="tier1">Actieve Clicker</div>
+				<div class="tier2">Actieve Clicker</div>
+				<div class="tier3">Actieve Clicker</div>
+				<div class="tier4">Actieve Clicker</div>
+			</div>
+
+			<!-- In deze div kan de speler de verschillende clickers kopen. --> 
+			<div class="tierdisplay rows" id="koopClickers">
+				<h3>Koop Clickers</h3>
+
+				<!-- Via deze div kan je de Chef Clicker kopen. Deze kan je als voorbeeld gebruiken. --> 
+				<div class="tier0 ruimte" onClick="koopClicker(0)">
+					<img class="icon" src="https://pngimg.com/uploads/chef/chef_PNG54.png">
+					<text>Huur een extra chef!</text>
+					<!-- De prijs is nu nog 1$. Deze kan je laten stijgen per aankoop! --> 
+					<text>1$</text>
+				</div> 
+
+				<div class="tier1 ruimte">Koop Clicker</div> 
+				<div class="tier2 ruimte">Koop Clicker</div> 
+				<div class="tier3 ruimte">Koop Clicker</div> 
+				<div class="tier4 ruimte">Koop Clicker</div> 
+			</div>
+
+
+			<!-- In deze div kan de speler Powerups voor de Clickers kopen. --> 
+			<div class="tierdisplay table" id="powerups">
+				<h3>Powerups</h3>
+
+				<!-- Via deze div kan je de Deegroller Powerup kopen. Deze kan je als voorbeeld gebruiken. --> 
+				<div class="tier0" onClick="koopPowerup(0)">
+					<img class="icon" src="https://gartic.com.br/imgs/mural/__/__fera__/rolling-pin.png">
+					<text>10$</text>
+				</div>
+
+				<div class="tier1">Powerup</div>
+				<div class="tier2">Powerup</div>
+				<div class="tier3">Powerup</div>
+				<div class="tier4">Powerup</div>
+			</div>
+		</section>
+
+		<footer>
+			<p>Gemaakt door: S. Jelle (zet jouw naam hier!)</p>
+		</footer>
+
+		<script src="script.js"></script>
+	</body>
+</html>
