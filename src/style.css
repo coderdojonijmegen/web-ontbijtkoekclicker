@@ -45,7 +45,7 @@ header {
 	margin: 0px 10px 0px 0px
 }
 
-/* Opmaak voor de upgrades/powerups in de drie lijsten. */
+/* Opmaak voor de upgrades/powerupWinkel in de drie lijsten. */
 .tierdisplay>div{
 	float: left;
 	height: 50px;
@@ -59,7 +59,7 @@ header {
 	width: 100%;
 }
 
-/* Opmaak voor de powerups, twee kolommen. */
+/* Opmaak voor de powerupWinkel, twee kolommen. */
 .table>div {
 	width: 50%;
 	display: flex;
@@ -90,7 +90,7 @@ header {
 }
 
 /* Opmaak voor de kolom met de Clickers die te koop zijn. */
-#koopClickers {
+#clickerWinkel {
 	float: left;
 	padding: 20px;
 	width: 20%;
@@ -99,7 +99,7 @@ header {
 }
 
 /* Opmaak voor de kolom met de Powerups die te koop zijn. */
-#powerups {
+#powerupWinkel {
 	float: left;
 	width: 20%;
 	height: 500px;

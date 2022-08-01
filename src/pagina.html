@@ -27,17 +27,17 @@
 				<h3>Actieve Clickers</h3>
 
 				<div class="tier0">
-					<!-- Per clicker van dit type voegen we een afbeelding toe. Er zijn nu 2 Chefs. --> 
+					<!-- Per clicker van dit type voegen we een afbeelding toe. --> 
 				</div>
 
-				<div class="tier1">Actieve Clicker</div>
-				<div class="tier2">Actieve Clicker</div>
-				<div class="tier3">Actieve Clicker</div>
-				<div class="tier4">Actieve Clicker</div>
+				<div class="tier1"></div>
+				<div class="tier2"></div>
+				<div class="tier3"></div>
+				<div class="tier4"></div>
 			</div>
 
 			<!-- In deze div kan de speler de verschillende clickers kopen. --> 
-			<div class="tierdisplay rows" id="koopClickers">
+			<div class="tierdisplay rows" id="clickerWinkel">
 				<h3>Koop Clickers</h3>
 
 				<!-- Via deze div kan je de Chef Clicker kopen. Deze kan je als voorbeeld gebruiken. --> 
@@ -48,27 +48,55 @@
 					<text>1$</text>
 				</div> 
 
-				<div class="tier1 ruimte">Koop Clicker</div> 
-				<div class="tier2 ruimte">Koop Clicker</div> 
-				<div class="tier3 ruimte">Koop Clicker</div> 
-				<div class="tier4 ruimte">Koop Clicker</div> 
+				<div class="tier1 ruimte" onClick="koopClicker(1)">
+					<img class="icon" src="???">
+					<text>???</text>
+					<text>??? $</text>
+				</div> 
+				<div class="tier2 ruimte" onClick="koopClicker(2)">
+					<img class="icon" src="???">
+					<text>???</text>
+					<text>??? $</text>
+				</div> 
+				<div class="tier3 ruimte" onClick="koopClicker(3)">
+					<img class="icon" src="???">
+					<text>???</text>
+					<text>??? $</text>
+				</div> 
+				<div class="tier4 ruimte" onClick="koopClicker(4)">
+					<img class="icon" src="???">
+					<text>???</text>
+					<text>??? $</text>
+				</div> 
+
 			</div>
 
 
 			<!-- In deze div kan de speler Powerups voor de Clickers kopen. --> 
-			<div class="tierdisplay table" id="powerups">
+			<div class="tierdisplay table" id="powerupWinkel">
 				<h3>Powerups</h3>
 
 				<!-- Via deze div kan je de Deegroller Powerup kopen. Deze kan je als voorbeeld gebruiken. --> 
-				<div class="tier0" onClick="koopPowerup(0)">
+				<div class="tier0" onclick="koopPowerup(0)">
 					<img class="icon" src="https://gartic.com.br/imgs/mural/__/__fera__/rolling-pin.png">
 					<text>10$</text>
 				</div>
-
-				<div class="tier1">Powerup</div>
-				<div class="tier2">Powerup</div>
-				<div class="tier3">Powerup</div>
-				<div class="tier4">Powerup</div>
+				<div class="tier1" onClick="koopPowerup(1)">
+					<img class="icon" src="???">
+					<text>???$</text>
+				</div>
+				<div class="tier2" onClick="koopPowerup(2)">
+					<img class="icon" src="???">
+					<text>???$</text>
+				</div>
+				<div class="tier3" onClick="koopPowerup(3)">
+					<img class="icon" src="???">
+					<text>???$</text>
+				</div>
+				<div class="tier4" onClick="koopPowerup(4)">
+					<img class="icon" src="???">
+					<text>???$</text>
+				</div>
 			</div>
 		</section>
 
