@@ -31,7 +31,7 @@ beginnen we met een vooropgezette pagina. Deze bestaat uit de volgende bestanden
 Deze zijn te downloaden via: [Download bestanden](start.zip).
 Zorg voordat je begint met de instructie dat je de pagina kan weergeven met je editor/plugin(s). 
 
-{{< voorbeeld kop="Extra: afbeeldingen lokaal opslaan" >}}
+{{< voorbeeld md=true kop="Extra: afbeeldingen lokaal opslaan" >}}
 De afbeeldingen die we gebruiken als voorbeeld maken geen deel uit van de download. 
 Dit zorgt dat je af en toe lange URLs in de code voorbij ziet komen. 
 Deze URLs kan je eventueel vervangen door de afbeeldingen te downloaden. 
@@ -179,7 +179,7 @@ Als je deze eenmaal gevonden hebt, kan je de inhoud van de `h2` via `innerText` 
 geldH2.innerText = "Geld: " + hoeveelheid + "$"
 {{< /highlight >}}
 
-{{< voorbeeld kop="Voorbeeldcode klikbaar koekje" >}}
+{{< voorbeeld md=true kop="Voorbeeldcode klikbaar koekje" >}}
 {{< highlight javascript>}}
 let geld = 0
 
@@ -197,6 +197,7 @@ function updateGeld(hoeveelheid) {
     geldH2.innerText = "Geld: " + hoeveelheid + "$"
 }
 {{< /highlight >}}
+
 Eventueel kan je `updateGeld` ook direct gebruik laten maken van de globale variabele `geld`.
 {{< /voorbeeld >}}
 
@@ -239,7 +240,7 @@ Het kan handig zijn om in `clickerWinkel` `console.log(aantalClickers[tier])` te
 om te zien hoeveel je er hebt na aanschaf.
 
 
-{{< voorbeeld kop="Voorbeeldcode Clicker winkel" >}}
+{{< voorbeeld md=true kop="Voorbeeldcode Clicker winkel" >}}
 {{< highlight javascript>}}
 const aantalClickers = [0, 0, 0, 0, 0]
 const clickerKosten = [1, 10, 50, 100, 500]
@@ -297,7 +298,7 @@ Om de functie `updateClickerGeld` elke seconde uit te voeren kan je de volgende 
 setInterval(updateClickerGeld, 1000)
 {{< /highlight >}}
 
-{{< voorbeeld kop="Voorbeeldcode actieve Clickers inkomsten toevoegen" >}}
+{{< voorbeeld md=true kop="Voorbeeldcode actieve Clickers inkomsten toevoegen" >}}
 {{< highlight javascript >}}
 const aantalClickerTiers = 5
 
@@ -385,7 +386,7 @@ tierDiv.appendChild(afbeelding)
 Het voorbeeld laat alleen niet zien hoe je dit voor een willekeurige `tier` doet. 
 Als je dit lastig vindt, vraag dan gerust om hulp!
 
-{{< voorbeeld kop="Voorbeeldcode actieve Clickers" >}}
+{{< voorbeeld md=true kop="Voorbeeldcode actieve Clickers" >}}
 {{< highlight javascript >}}
 /* Een lijst met de icoontjes van de Clickers. */
 clickerIcons = [
@@ -408,6 +409,7 @@ function voegActieveClickerToe(tier) {
     tierDiv.appendChild(afbeelding)
 }
 {{< /highlight >}}
+
 Van belang: gebruik `voegActieveClickerToe(tier)` aan het einde van de functie `koopClicker`, 
 zodat het kopen van een Clicker van tier `tier` een nieuwe aan de lijst voor `tier` Clickers toevoegt.
 {{< /voorbeeld >}}
@@ -465,7 +467,7 @@ const tierDiv = ...
 tierDiv.remove()
 {{< /highlight >}}
 
-{{< voorbeeld kop="Voorbeeldcode Powerup winkel" >}}
+{{< voorbeeld md=true kop="Voorbeeldcode Powerup winkel" >}}
 {{< highlight javascript >}}
 const powerupKosten = [10, 100, 500, 1000, 5000]
 
@@ -518,7 +520,7 @@ Laat ons eventueel weten of er nog andere uitbreidingen zijn die je in deze inst
 
 ## Top secret
 
-{{< voorbeeld kop="De volledige voorbeeldcode" >}}
+{{< voorbeeld md=true kop="De volledige voorbeeldcode" >}}
 {{< highlight javascript >}}
 
 /* Een lijst met de icoontjes van de Clickers. */
