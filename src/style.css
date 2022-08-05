@@ -12,8 +12,9 @@ header {
 	background-color: #666;
 	padding: 30px;
 	text-align: center;
-	font-size: 35px;
+	font-size: 55px;
 	color: white;
+	font-family: 'Cookie', cursive;
 }
 
 /* Kleuren voor vijf upgrades. */
