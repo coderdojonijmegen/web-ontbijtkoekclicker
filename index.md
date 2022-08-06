@@ -7,6 +7,10 @@ headercolor: "teal-background"
 taal: JavaScript, HTML & CSS
 ---
 
+We gaan onze eigen versie van het spel Cookie Clicker maken met JavaScript en HTML!
+
+<!--more-->
+
 ## Introductie
 
 In deze instructie gaan we voornamelijk aan de slag met JavaScript. 
