@@ -23,7 +23,6 @@ eigen draai geven!
 ## Benodigdheden
 
 [comment]: # (Is er een betere manier om naar interne instructies te verwijzen?)
-[comment]: # (Hoe backticks in voorbeeld environment?)
 
 Ten eerste is het handig om bekend te zijn met de concepten van een andere Dojo: 
 [Web - Development](https://coderdojo-nijmegen.nl/instructies/web-development/).
