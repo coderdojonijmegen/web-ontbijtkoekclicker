@@ -20,17 +20,32 @@ Het spel is gebaseerd op het bekende spel
 Naast het coderen van de functionaliteit, kan je aan verschillende onderdelen van het spel een 
 eigen draai geven!
 
+
+
 ## Benodigdheden
 
 [comment]: # (Is er een betere manier om naar interne instructies te verwijzen?)
 
-Ten eerste is het handig om bekend te zijn met de concepten van een andere Dojo: 
-[Web - Development](https://coderdojo-nijmegen.nl/instructies/web-development/).
-Voor deze Dojo gebruiken we dezelfde editor als in de bovenstaande instructie. 
+### Voorkennis
+Voor het maken van de coockie clicker het is belangrijk om bekend te zijn met:
+ - HTML
+ - CSS
+ - JavaScript
+ - Visual studio code
 
+Ben je hier nog niet mee bekend? Ga dan eerst aan de slag met de instructie [Web - Development](/instructies/web-development/).
+
+Voor deze instructie gebruiken we dezelfde editor als bij de [Web - Development](/instructies/web-development/) instructie:
+[Visual Studio Code](https://code.visualstudio.com/download). 
+
+### Voorbereidde bestanden
 Om meer tijd te kunnen besteden aan JavaScript en het personaliseren van het spel, 
-beginnen we met een vooropgezette pagina. Deze bestaat uit de volgende bestanden: 
-[HTML](start/pagina.html), [CSS](start/style.css) en [JavaScript](start/script.js).
+beginnen we met een vooropgezette pagina.  
+Deze bestaat uit de volgende bestanden: 
+1. [HTML](start/pagina.html)
+2. [CSS](start/style.css)
+3. [JavaScript](start/script.js).
+
 Deze zijn te downloaden via: [Download bestanden](start.zip).
 Zorg voordat je begint met de instructie dat je de pagina kan weergeven met je editor/plugin(s). 
 
@@ -38,7 +53,7 @@ Zorg voordat je begint met de instructie dat je de pagina kan weergeven met je e
 De afbeeldingen die we gebruiken als voorbeeld maken geen deel uit van de download. 
 Dit zorgt dat je af en toe lange URLs in de code voorbij ziet komen. 
 Deze URLs kan je eventueel vervangen door de afbeeldingen te downloaden. 
-Zet gedownloade afbeeldingen in dezelfde directory als waar [pagina.html](start/pagina.html) zich bevind. 
+Zet gedownloade afbeeldingen in dezelfde directory als waar [pagina.html](start/pagina.html) zich bevindt.   
 Deze kan je vervolgens als volgt gebruiken:
 
 {{< highlight html >}}
@@ -51,18 +66,23 @@ Deze kan je vervolgens als volgt gebruiken:
 We beginnen met een samenvatting van het spel, zodat het duidelijk is waar we naartoe werken. 
 De leukste manier om hier een idee over te krijgen is natuurlijk door het origineel te spelen.
 
+Het doel van het spel is om cookies te genereren. Dit kun je doen door op het koekje te klikken, maar je kunt niet
+eeuwig blijven klikken. Uiteindelijk wil je dat er zoveel mogelijk koekjes automatisch worden gegenereerd. Om het spel
+automatisch koekjes te laten genereren kun je clickers kopen, deze klikken automatisch op het koekje. Je koopt clickers
+door met koekjes te betalen. Bij iedere aankoop worden de clickers duurder. Daarnaast kun je Powerups kopen met koekjes.
+Deze Powerups verbeteren je clickers zodat zij bijvoorbeeld sneller cookies genereren.
+
 Het spel bestaat uit pakweg vier verschillende onderdelen:
-- Een koekje waar je als speler op kan klikken.
-  Hier kan je ook je aantal koekjes (score) en het aantal koekjes dat je per seconde verdient zien.
-- Een overzicht waarin je alle actieve Clickers kan zien.
-- Een winkel waar je Clickers kan kopen. Deze klikken automatisch op het koekje.
-  Clickers worden bij elke aankoop duurder.
-- Een winkel waar je Powerups kan kopen. Deze verbeteren je Clickers.
-  Elke Powerup kan je één keer kopen.
+ 1. Een koekje waar je als speler op kan klikken. 
+    Hier kan je ook je aantal koekjes (score) en het aantal koekjes dat je per seconde verdient zien.
+ 2. Een overzicht waarin je alle actieve Clickers kan zien.
+ 3. Een winkel waar je Clickers kan kopen. 
+ 4. Een winkel waar je Powerups kan kopen. 
 
 ## Relatie met de HTML code (1)
 
-Het bestand [pagina.html](start/pagina.html) bevat een `section` met vier verschillende `div` tags:
+We beginnen met het HTMl bestand. Het bestand [pagina.html](start/pagina.html) bevat een `section` tag 
+met daarin vier verschillende `div` tags:
 
 {{< highlight html>}}
 <section>
