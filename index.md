@@ -100,7 +100,8 @@ Met JavaScript maken we de pagina uiteindelijk interactief, zodat je er dus een 
 Om de drie talen op een georganiseerde manier samen te laten werken, 
 hebben we een aantal keuzes in de opzet van het HTML-bestand gemaakt.
 Die keuzes lichten we in dit deel toe, 
-zodat je de individuele onderdelen op de HTML-pagina straks gemakkelijk kan beïnvloeden.
+zodat je de individuele onderdelen op de HTML-pagina straks gemakkelijk 
+kan beïnvloeden via JavaScript-code.
 
 We beginnen met het HTMl bestand. Het bestand [pagina.html](start/pagina.html) bevat een `section` tag 
 met daarin vier verschillende `div` tags:
