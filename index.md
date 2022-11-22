@@ -11,6 +11,13 @@ We gaan onze eigen versie van het spel Cookie Clicker maken met JavaScript en HT
 
 <!--more-->
 
+<!-- 
+Huidige stijl:
+- Opsomming met puntjes, tenzij:
+	+ nadruk op het aantal items (bijv. "Het spel heeft _vier_ onderdelen:");
+	+ we later in de tekst naar het getal willen refereren.
+-->
+
 ## Introductie
 
 In deze instructie gaan we voornamelijk aan de slag met JavaScript. 
@@ -20,17 +27,32 @@ Het spel is gebaseerd op het bekende spel
 Naast het coderen van de functionaliteit, kan je aan verschillende onderdelen van het spel een 
 eigen draai geven!
 
+
+
 ## Benodigdheden
 
 [comment]: # (Is er een betere manier om naar interne instructies te verwijzen?)
 
-Ten eerste is het handig om bekend te zijn met de concepten van een andere Dojo: 
-[Web - Development](https://coderdojo-nijmegen.nl/instructies/web-development/).
-Voor deze Dojo gebruiken we dezelfde editor als in de bovenstaande instructie. 
+### Voorkennis
+Voor het maken van de Ontbijtkoekclicker is het belangrijk om bekend te zijn met de volgende talen:
+- HTML
+- CSS
+- JavaScript
 
+Ben je hier nog niet mee bekend? Ga dan eerst aan de slag met de instructie [Web - Development](/instructies/web-development/).
+
+Voor deze instructie gebruiken we dezelfde editor als bij de 
+[Web - Development](/instructies/web-development/) instructie:
+[Visual Studio Code](https://code.visualstudio.com/download). 
+
+### Voorbereidde bestanden
 Om meer tijd te kunnen besteden aan JavaScript en het personaliseren van het spel, 
-beginnen we met een vooropgezette pagina. Deze bestaat uit de volgende bestanden: 
-[HTML](start/pagina.html), [CSS](start/style.css) en [JavaScript](start/script.js).
+beginnen we met een vooropgezette pagina.  
+Deze bestaat uit de volgende bestanden: 
+- [HTML](start/pagina.html)
+- [CSS](start/style.css)
+- [JavaScript](start/script.js).
+
 Deze zijn te downloaden via: [Download bestanden](start.zip).
 Zorg voordat je begint met de instructie dat je de pagina kan weergeven met je editor/plugin(s). 
 
@@ -38,7 +60,7 @@ Zorg voordat je begint met de instructie dat je de pagina kan weergeven met je e
 De afbeeldingen die we gebruiken als voorbeeld maken geen deel uit van de download. 
 Dit zorgt dat je af en toe lange URLs in de code voorbij ziet komen. 
 Deze URLs kan je eventueel vervangen door de afbeeldingen te downloaden. 
-Zet gedownloade afbeeldingen in dezelfde directory als waar [pagina.html](start/pagina.html) zich bevind. 
+Zet gedownloade afbeeldingen in dezelfde directory als waar [pagina.html](start/pagina.html) zich bevindt.   
 Deze kan je vervolgens als volgt gebruiken:
 
 {{< highlight html >}}
@@ -51,18 +73,38 @@ Deze kan je vervolgens als volgt gebruiken:
 We beginnen met een samenvatting van het spel, zodat het duidelijk is waar we naartoe werken. 
 De leukste manier om hier een idee over te krijgen is natuurlijk door het origineel te spelen.
 
+Het doel van het spel is om cookies te genereren. 
+Dit kun je doen door op het koekje te klikken, maar je kunt niet eeuwig blijven klikken. 
+Uiteindelijk wil je dat er zoveel mogelijk koekjes automatisch worden gegenereerd. 
+Om het spel automatisch koekjes te laten genereren kun je Clickers kopen, 
+deze klikken automatisch op het koekje. 
+Je koopt Clickers door met koekjes te betalen. Bij iedere aankoop worden de Clickers duurder. 
+Daarnaast kun je Powerups kopen met koekjes.
+Deze Powerups verbeteren je Clickers zodat zij bijvoorbeeld sneller cookies genereren.
+
 Het spel bestaat uit pakweg vier verschillende onderdelen:
-- Een koekje waar je als speler op kan klikken.
-  Hier kan je ook je aantal koekjes (score) en het aantal koekjes dat je per seconde verdient zien.
-- Een overzicht waarin je alle actieve Clickers kan zien.
-- Een winkel waar je Clickers kan kopen. Deze klikken automatisch op het koekje.
-  Clickers worden bij elke aankoop duurder.
-- Een winkel waar je Powerups kan kopen. Deze verbeteren je Clickers.
-  Elke Powerup kan je één keer kopen.
+ 1. Een koekje waar je als speler op kan klikken. 
+    Hier kan je ook je aantal koekjes (score) en het aantal koekjes dat je per seconde verdient zien.
+ 2. Een overzicht waarin je alle actieve Clickers kan zien.
+ 3. Een winkel waar je Clickers kan kopen. 
+ 4. Een winkel waar je Powerups kan kopen. 
 
-## Relatie met de HTML code (1)
+## Relatie met de HTML-code (1)
 
-Het bestand [pagina.html](start/pagina.html) bevat een `section` met vier verschillende `div` tags:
+In deze instructie focussen we voornamelijk op het schrijven van JavaScript-code.
+Maar als je Cookie Clicker speelt, kom je niet enkel in aanraking met JavaScript.
+Het spel gebruikt HTML-code om een "skelet" van de pagina weer te geven. 
+Het spel kleedt het skelet vervolgens aan met behulp van CSS. 
+Met JavaScript maken we de pagina uiteindelijk interactief, zodat je er dus een spel op kan spelen.
+
+Om de drie talen op een georganiseerde manier samen te laten werken, 
+hebben we een aantal keuzes in de opzet van het HTML-bestand gemaakt.
+Die keuzes lichten we in dit deel toe, 
+zodat je de individuele onderdelen op de HTML-pagina straks gemakkelijk 
+kan beïnvloeden via JavaScript-code.
+
+We beginnen met het HTMl bestand. Het bestand [pagina.html](start/pagina.html) bevat een `section` tag 
+met daarin vier verschillende `div` tags:
 
 {{< highlight html>}}
 <section>
@@ -77,7 +119,8 @@ Het bestand [pagina.html](start/pagina.html) bevat een `section` met vier versch
 </section>
 {{< /highlight >}}
 
-Deze `div`s komen overeen met de onderdelen van het originele spel. 
+Deze `div`s komen overeen met de onderdelen van het originele spel
+en bepalen dus op welke plek van de pagina de onderdelen komen te staan.
 Het belangrijkste onderdeel van de `div`s zijn de `id`s. 
 Met behulp van de `id`s kunnen we deze `div`s bereiken en gebruiken in JavaScript.
 
@@ -88,18 +131,24 @@ Om te zorgen dat we vanuit de `div` met actieve Clickers opereren, bereiken we d
 const actieveClickerDiv = document.getElementById("actieveClickers")
 {{< /highlight >}}
 
-Dus: elk onderdeel van het spel komt overeen met een `div` in de HTML code!
-Als we in JavaScript iets aan de Powerups willen veranderen, 
-zoeken we deze eerst op met de `id`!
+<!-- 
+Een vergelijking met een bekende boomstructuur, bijvoorbeeld een filesystem, 
+zou hier nog handig kunnen zijn.
+-->
 
-## Relatie met de HTML code (2)
+Kortom, elk onderdeel van het spel komt overeen met een `div` in de HTML-code!
+Als we bijvoorbeeld in JavaScript iets aan de Powerups willen veranderen, 
+zoeken we de Powerup `div` eerst op met de correcte `id`!
+De `id` is in dit voorbeeld `powerupWinkel`.
+
+## Relatie met de HTML-code (2)
 
 We weten nu waar de onderdelen van het spel komen te staan, 
 maar hoe zien die onderdelen er precies uit?
 En wat staat er in de bijbehorende `div`s?
 
-Voor de meeste onderdelen is het antwoord hetzelfde: 
-ze bestaan uit een lijst, met een segment voor elke rang (Engels: "tier") Clicker. 
+De meeste onderdelen bestaan uit een lijst, 
+met een onderdeel (of: [element](https://nl.wikipedia.org/wiki/Lijst_(informatica))) voor elke rang (Engels: "tier") Clicker. 
 Als voorbeeld kunnen we naar de Powerups kijken:
 
 {{< highlight html>}}
@@ -156,10 +205,10 @@ Let op: omdat `getElementsByClassName` meerdere resultaten _kan_ geven
 Aan het begin van het spel heb je nog geen Clickers en moet je handmatig je koekjes verdienen.
 Dit doe je door op de grote afbeelding van het koekje te klikken. 
 Hier komen enkele dingen bij kijken:
-- elke klik op de afbeelding word geregistreerd via een `onClick="onClickCookie()"` HTML attribuut;
+- elke klik op de afbeelding word geregistreerd via een `onClick="onClickCookie()"` HTML-attribuut;
 - we houden de hoeveelheid koekjes bij in een variabele `geld` in JavaScript, deze begint op `0`;
 - de functie `onClickCookie` verhoogt `geld` met `1`;
-- een functie `updateGeld` zorgt dat de nieuwe waarde van `geld` in de HTML code update;
+- een functie `updateGeld` zorgt dat de nieuwe waarde van `geld` in de HTML-code update;
 - `onClickCookie` roept `updateGeld` aan na het verhogen van `geld`.
 
 Om dit te implementeren, moet je goed letten op de `id`s van de `div`- en `h2` tags:
@@ -211,7 +260,7 @@ Als we eenmaal wat koekjes hebben, willen we het spel natuurlijk voor ons laten 
 Hiervoor gebruiken we Clickers, die je kan kopen bij de Clickers winkel. 
 In [pagina.html](start/pagina.html) zien we een `div` met `id=clickerWinkel`; 
 dit is waar we de Clickers te koop zullen zetten.
-In deze `div` vinden we de volgende HTML code:
+In deze `div` vinden we de volgende HTML-code:
 
 {{< highlight html>}}
 <div class="tier1 ruimte" onClick="koopClicker(1)">
@@ -222,18 +271,22 @@ In deze `div` vinden we de volgende HTML code:
 {{< /highlight >}}
 
 Hier kan je je eigen Clickers in zetten, met een plaatje en een prijs!
-Dit doe je door de `???` te vervangen zoals te zien is in het voorbeeld voor `tier0`.
+Dit doe je door de `???` te vervangen. 
+Als voorbeeld hebben we dit al gedaan voor `tier0` in het HTML-bestand; 
+hier is een chefkok met zijn cloche te zien.
 Je hoeft ze natuurlijk niet per se alle vijf toe te voegen.
 
 Als je een paar Clickers hebt, kunnen we beginnen met het toevoegen van de functionaliteit. 
 Laten we een paar doelen vaststellen:
-- elke klik op een Clicker `div` word geregistreerd via een `onClick="koopClicker(n)"` HTML attribuut;
+- elke klik op een Clicker `div` word geregistreerd via een `onClick="koopClicker(n)"` HTML-attribuut;
 - we maken een constante variabele met het maximum aantal Clickers van een tier, 
-  om te zorgen dat ze later op de pagina passen;
+  om te zorgen dat ze later op de pagina passen [^1];
 - we houden per tier Clicker bij hoeveel ze kosten;
 - de functie `koopClicker` checkt of je genoeg geld hebt en of er nog niet teveel Clickers zijn;
 - als dit het geval is, registreer dan de nieuwe Clicker en haal het geld weg (aankoop voltooid);
 - update naderhand de pagina op basis van de veranderingen.
+
+[^1]: Er is immers geen ruimte op het scherm voor 100 kok icoontjes!
 
 Vooralsnog verdienen de Clickers dus nog geen koekjes voor ons, 
 we houden enkel bij hoeveel we er van welke tier gekocht hebben. 
@@ -287,7 +340,7 @@ Een voorbeeld:
 | Clicker tier 4 | 0 | 0 | 0 | 
 | | | __Som:__ | __18__ |
 
-We hebben drie functies nodig:
+We hebben drie nieuwe functies nodig:
 - `berekenGeldPerSeconde` voert de berekening uit het voorbeeld uit;
 - `updateGeldPerSeconde` update de `div` met `id="geldPerSeconde"`;
 - `koopClicker` (en later `koopPowerup`) voeren `updateGeldPerSeconde` uit bij aankoop van een nieuwe Clicker.
@@ -345,7 +398,7 @@ uitvoeren bij aankoop van een nieuwe Clicker!
 
 ## Actieve Clickers weergeven
 
-We kunnen eindelijk Clickers toevoegen, maar de pagina voelt nog erg leeg. 
+We kunnen eindelijk werkende Clickers toevoegen, maar de pagina voelt nog erg leeg. 
 Het zou leuk zijn om te zien welke Clickers we in dienst hebben!
 Hiervoor gebruiken we de `div` met `id="actieveClickers"`.
 Dit is hoe de `div` er uit zou moeten zien na het kopen van twee Chefs:
@@ -371,8 +424,8 @@ Die elementen kunnen we dus vinden zoals voorheen!
 De vraag is nu: hoe voegen we hier afbeeldingen aan toe zoals in het bovenstaande voorbeeld?
 
 Het antwoord: via `document.createElement`.
-Via deze functie kunnen we in de JavaScript code HTML elementen maken, 
-en deze later in een ander HTML element toevoegen.
+Via deze functie kunnen we in de JavaScript-code HTML-elementen maken, 
+en deze later in een ander HTML-element toevoegen.
 Dit is te zien in het volgende voorbeeld:
 
 {{< highlight javascript >}}
@@ -432,7 +485,7 @@ deze zorgt dat de Chef twee keer zoveel koekjes per seconde kan produceren.
 In deze instructie zullen we één Powerup per tier Clicker maken. 
 Dit is net iets simpeler dan in het originele spel, 
 maar je kan het later uitbreiden!
-De HTML code voor Powerups lijkt erg op die van de Clicker winkel:
+De HTML-code voor Powerups lijkt erg op die van de Clicker winkel:
 
 {{< highlight html >}}
 <!-- In deze div kan de speler Powerups voor de Clickers kopen. --> 
@@ -454,7 +507,7 @@ De HTML code voor Powerups lijkt erg op die van de Clicker winkel:
 {{< /highlight >}}
 
 Ook hier komt een kort plan van aanpak van pas:
-- elke klik op een Clicker `div` word geregistreerd via een `onClick="koopPowerup(n)"` HTML attribuut;
+- elke klik op een Clicker `div` word geregistreerd via een `onClick="koopPowerup(n)"` HTML-attribuut;
 - we houden per tier Clicker bij of de Powerup al gekocht is;
 - de functie `koopPowerup` check of je genoeg geld hebt en of de Powerup nog niet gekocht is;
 - als dit het geval is, registreer dan de nieuwe Powerup en haal het geld weg (aankoop voltooid);
@@ -463,7 +516,9 @@ Ook hier komt een kort plan van aanpak van pas:
 Ook moeten we zorgen dat we ergens een lijstje bijhouden met de inkomsten per seconde 
 van elke Clicker. Als de Powerup is gekocht, vermenigvuldigen we die inkomsten met twee.
 
-Tip: als de aanschaf succesvol is, kan je de Powerup uit de lijst halen via:
+Tip: als de aanschaf van een Powerup succesvol is, 
+moeten we zorgen dat men deze niet nogmaals kan kopen.
+Je kan de Powerup uit de lijst halen via:
 
 {{< highlight javascript >}}
 const tierDiv = ...
