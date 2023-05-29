@@ -4,7 +4,7 @@ date: 2022-07-28T20:56:17+02:00
 draft: false
 toc: true
 headercolor: "teal-background"
-taal: JavaScript, HTML & CSS
+onderwerp: JavaScript
 ---
 
 We gaan onze eigen versie van het spel Cookie Clicker maken met JavaScript en HTML!
