@@ -49,9 +49,9 @@ Voor deze instructie gebruiken we dezelfde editor als bij de
 Om meer tijd te kunnen besteden aan JavaScript en het personaliseren van het spel, 
 beginnen we met een vooropgezette pagina.  
 Deze bestaat uit de volgende bestanden: 
-- [HTML](start/pagina.html)
-- [CSS](start/style.css)
-- [JavaScript](start/script.js).
+- HTML
+- CSS
+- JavaScript
 
 Deze zijn te downloaden via: [Download bestanden](start.zip).
 Zorg voordat je begint met de instructie dat je de pagina kan weergeven met je editor/plugin(s). 
