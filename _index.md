@@ -60,7 +60,7 @@ Zorg voordat je begint met de instructie dat je de pagina kan weergeven met je e
 De afbeeldingen die we gebruiken als voorbeeld maken geen deel uit van de download. 
 Dit zorgt dat je af en toe lange URLs in de code voorbij ziet komen. 
 Deze URLs kan je eventueel vervangen door de afbeeldingen te downloaden. 
-Zet gedownloade afbeeldingen in dezelfde directory als waar [pagina.html](start/pagina.html) zich bevindt.   
+Zet gedownloade afbeeldingen in dezelfde directory als waar pagina.html zich bevindt.   
 Deze kan je vervolgens als volgt gebruiken:
 
 {{< highlight html >}}
@@ -103,7 +103,7 @@ Die keuzes lichten we in dit deel toe,
 zodat je de individuele onderdelen op de HTML-pagina straks gemakkelijk 
 kan beïnvloeden via JavaScript-code.
 
-We beginnen met het HTMl bestand. Het bestand [pagina.html](start/pagina.html) bevat een `section` tag 
+We beginnen met het HTMl bestand. Het bestand pagina.html bevat een `section` tag 
 met daarin vier verschillende `div` tags:
 
 {{< highlight html>}}
@@ -258,7 +258,7 @@ Eventueel kan je `updateGeld` ook direct gebruik laten maken van de globale vari
 
 Als we eenmaal wat koekjes hebben, willen we het spel natuurlijk voor ons laten werken!
 Hiervoor gebruiken we Clickers, die je kan kopen bij de Clickers winkel. 
-In [pagina.html](start/pagina.html) zien we een `div` met `id=clickerWinkel`; 
+In pagina.html zien we een `div` met `id=clickerWinkel`; 
 dit is waar we de Clickers te koop zullen zetten.
 In deze `div` vinden we de volgende HTML-code:
 
@@ -332,13 +332,13 @@ Het totaal voegen we toe aan de hoeveelheid koekjes die we al hebben.
 Een voorbeeld:
 
 | Clicker &nbsp;&nbsp;&nbsp;&nbsp; | Inkomen per seconde &nbsp;&nbsp;&nbsp;&nbsp; | Aantal &nbsp;&nbsp;&nbsp;&nbsp; | Totaal &nbsp;&nbsp;&nbsp;&nbsp; |
-|:---|:---:|:---|:---|
-| Kok | 1 | 4 | 4 |
-| Clicker tier 1 | 2 | 1 | 2 |
-| Clicker tier 2 | 4 | 3 | 12 |
-| Clicker tier 3 | 0 | 0 | 0 |
-| Clicker tier 4 | 0 | 0 | 0 | 
-| | | __Som:__ | __18__ |
+|:---------------------------------|:--------------------------------------------:|:--------------------------------|:--------------------------------|
+| Kok                              |                      1                       | 4                               | 4                               |
+| Clicker tier 1                   |                      2                       | 1                               | 2                               |
+| Clicker tier 2                   |                      4                       | 3                               | 12                              |
+| Clicker tier 3                   |                      0                       | 0                               | 0                               |
+| Clicker tier 4                   |                      0                       | 0                               | 0                               | 
+|                                  |                                              | __Som:__                        | __18__                          |
 
 We hebben drie nieuwe functies nodig:
 - `berekenGeldPerSeconde` voert de berekening uit het voorbeeld uit;
