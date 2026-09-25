@@ -41,9 +41,9 @@ Voor het maken van de Ontbijtkoekclicker is het belangrijk om bekend te zijn met
 
 Ben je hier nog niet mee bekend? Ga dan eerst aan de slag met de instructie [Web - Development](/instructies/web-development/).
 
-Voor deze instructie gebruiken we dezelfde editor als bij de 
-[Web - Development](/instructies/web-development/) instructie:
-[Visual Studio Code](https://code.visualstudio.com/download). 
+### Editor
+
+{{< include file="/installatie/visual-studio-code" >}}
 
 ### Voorbereidde bestanden
 Om meer tijd te kunnen besteden aan JavaScript en het personaliseren van het spel, 
